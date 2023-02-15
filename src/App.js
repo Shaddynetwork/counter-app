@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 
 
-x=5;
+
 class App extends Component {
   render() {
     return (

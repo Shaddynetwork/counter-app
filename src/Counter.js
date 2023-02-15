@@ -23,13 +23,13 @@ increment = () => {
 
 };
 
-decrement = () => {
+decrement=()=> {
+    const newCount = this.state.count - 5;
 
-    this.setState({
-        count: this.state.count - 5
-    });
-
-};
+    if (newCount >= 0) { // make sure the counter doesn't go below 0!
+      this.setState({ count: newCount });  
+    }    
+  }
 
 
 
@@ -41,12 +41,12 @@ decrement = () => {
         <div className = "count">
             <h1 className = "count-heading">Simple counter App</h1>
             <p className = "count-display">Counter - {this.state.count}</p>
-        
+
 
             <div className = "count-buttons">
 
               <button  className = "button-1" onClick={this.reset}>Reset</button>
-        
+
 
               <button className = "button-2" onClick={this.increment}>Increment</button>
 
